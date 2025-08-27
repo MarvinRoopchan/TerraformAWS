@@ -89,7 +89,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   origin {
-    domain_name = aws_s3_bucket.site.website_endpoint
+    domain_name = aws_s3_bucket_website_configuration.static_site.website_endpoint
     origin_id   = "s3-website-marvin-launchpad"
 
     custom_origin_config {
